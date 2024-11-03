@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "emailjs-com": "^3.2.0",
+    "react-redux": "^9.1.2",
+    "redux": "^5.0.1"
+  }
+}
