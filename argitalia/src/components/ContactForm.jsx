@@ -21,8 +21,8 @@ const ContactForm = () => {
         e.preventDefault();
 
         emailjs.send(
-            'service_p11zck7',         // Reemplaza con  Service ID de Clau
-            'template_zilqopm',        // Reemplaza con  Template ID de -clau
+            'service_mj9ktui',         // Reemplaza con  Service ID de Clau
+            'template_zilqopm',        // Reemplaza con  Template ID de Clau
             {
                 name: formData.name,
                 email: formData.email,
@@ -42,7 +42,11 @@ const ContactForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        
+        <form onSubmit={handleSubmit} id="Dejanos-tu-mensaje">
+            <div>
+                <h3>Dejanos tu mensaje</h3> 
+            </div>
             <div className="mb-3">
                 <label htmlFor="name" className="form-label">Nombre</label>
                 <input

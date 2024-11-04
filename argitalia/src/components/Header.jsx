@@ -19,6 +19,9 @@ const Header = () => {
                     <li className="nav-item">
                         <a className="nav-link" href="#donde-estamos">Dónde Estamos?</a>
                     </li>
+                    <li>
+                        <a className='nav-link' href='#Dejanos-tu-mensaje'>Dejanos tu mensaje</a>
+                    </li>
                 </ul>
             </div>
         </nav>
