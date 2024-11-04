@@ -21,14 +21,14 @@ const ContactForm = () => {
         e.preventDefault();
 
         emailjs.send(
-            'YOUR_SERVICE_ID',         // Reemplaza con tu Service ID
-            'YOUR_TEMPLATE_ID',        // Reemplaza con tu Template ID
+            'service_p11zck7',         // Reemplaza con  Service ID de Clau
+            'template_zilqopm',        // Reemplaza con  Template ID de -clau
             {
                 name: formData.name,
                 email: formData.email,
                 message: formData.message,
             },
-            'YOUR_USER_ID'             // Reemplaza con tu User ID
+            'd8tuhbd7e1Kmk-KuD'             // Reemplaza con User ID
         )
         .then((result) => {
             console.log(result.text);
