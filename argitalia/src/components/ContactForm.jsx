@@ -42,8 +42,10 @@ const ContactForm = () => {
     };
 
     return (
-        
-        <form onSubmit={handleSubmit} id="Dejanos-tu-mensaje">
+        <div className="container">
+        <div className="row justify-content-center">
+        <div className="col-md-6">
+        <form onSubmit={handleSubmit} id="Dejanos-tu-mensaje" className="p-4 border rounded">
             <div>
                 <h3>Dejanos tu mensaje</h3> 
             </div>
@@ -85,6 +87,9 @@ const ContactForm = () => {
             </div>
             <button type="submit" className="btn btn-primary">Enviar</button>
         </form>
+        </div>
+        </div>
+        </div>
     );
 };
 
