@@ -1,0 +1,22 @@
+#Dejanos-tu-mensaje {
+    background-color: #f9e79f; /* Color de fondo del formulario */
+    padding: 50px 0; /* Espacio en la parte superior e inferior */
+}
+
+h2 {
+    margin-bottom: 30px; /* Espacio debajo del título */
+    font-weight: bold; /* Negrita para el título */
+}
+
+.form-control {
+    border-radius: 0.25rem; /* Bordes redondeados */
+}
+
+.btn-primary {
+    background-color: #ca6f1e; /* Color del botón */
+    border: none; /* Sin borde */
+}
+
+.btn-primary:hover {
+    background-color: #b65e1a; /* Color al pasar el mouse */
+}
