@@ -20,11 +20,49 @@ const Main = () => (
         </section>
         <section id="que-hacemos">
             <h2>Qué Hacemos?</h2>
-            <p>Descripción de los servicios o productos ofrecidos.</p>
+            <p>
+            En nuestra gestora, ofrecemos una amplia gama de servicios para acompañarte en cada etapa del proceso 
+            de ciudadanía italiana y facilitar tu transición a la vida en Italia. Nos especializamos en:
+            </p>
+            <p>
+            Armado y verificación de carpetas: Nos aseguramos de que toda la documentación esté completa y en 
+            orden para el proceso de ciudadanía, revisando cada detalle para evitar inconvenientes.
+            </p>
+            <p>
+            Traducciones y aseveraciones: Gestionamos traducciones oficiales y aseveraciones de los documentos 
+            necesarios, cumpliendo con los requisitos exigidos por las autoridades italianas.
+            </p>
+            <p>
+            Búsqueda de partidas argentinas e italianas: Nos encargamos de encontrar partidas de nacimiento, 
+            matrimonio u otros documentos en Argentina e Italia, agilizando el proceso de recolección de información 
+            clave.
+            </p>
+            <p>
+            Búsqueda de alquileres para fijar residencia: Te ayudamos a encontrar opciones de alojamiento en 
+            Italia, facilitando el requisito de fijar residencia y cumpliendo con los estándares legales.
+            </p>
+            <p>
+            Asesoramiento integral: Ofrecemos orientación personalizada sobre todos los aspectos relacionados 
+            con la ciudadanía italiana, permisos de residencia, obtención de permisos de soggiorno, y la conversión 
+            de licencias de conducir.
+            </p>
+            <p>
+            Nuestro objetivo es que cada paso sea lo más simple posible, brindándote el respaldo necesario para 
+            que puedas cumplir tu meta de obtener la ciudadanía y asentarte en Italia con confianza.
+            </p>
         </section>
         <section id="donde-estamos">
             <h2>Dónde Estamos?</h2>
-            <p>Información sobre la ubicación física o puntos de contacto.</p>
+            <p>
+            Nos encontramos en la provincia de Cosenza, en los alrededores de los comunes de Guardia Piemontese, 
+            Fagnano Castello, Paola, y San Marco Argentano. Aquí te ofrecemos opciones de departamentos amoblados 
+            con contrato registrado para que puedas fijar residencia de manera segura y cumpliendo con todos los 
+            requisitos legales.
+            </p>
+            <p>
+            Nuestra ubicación estratégica facilita el acceso a los servicios y trámites necesarios para el proceso 
+            de ciudadanía, brindándote el respaldo y el entorno adecuado para establecerte cómodamente en Italia.
+            </p>
         </section>
     </main>
 );
