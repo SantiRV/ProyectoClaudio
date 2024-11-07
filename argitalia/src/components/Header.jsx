@@ -3,7 +3,7 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <nav className="navbar navbar-expand-lg" style={{ backgroundColor: '#ca6f1e' }}>
+        <nav className="navbar navbar-expand-lg" style={{ backgroundColor: '#112241' }}>
             <a className="navbar-brand ml-3 text-white">Argitalia Ciudadanias</a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>

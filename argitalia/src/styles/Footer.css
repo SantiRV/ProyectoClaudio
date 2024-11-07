@@ -1,24 +1,24 @@
 footer {
-    background-color: #ca6f1e; /* Cambia el color según tu preferencia */
-    color: white; /* Color del texto */
-    padding: 20px; /* Espaciado interno */
-    text-align: center; /* Centra el texto */
-    position: relative; /* Para evitar problemas de superposición */
-    width: 100%; /* Asegúrate de que ocupe todo el ancho */
-    bottom: 0; /* Asegúrate de que el footer esté al final */
+    background-color: #ca6f1e; 
+    color: white; 
+    padding: 20px; 
+    text-align: center; 
+    position: relative; 
+    width: 100%; 
+    bottom: 0; 
 }
 
 footer p {
-    margin: 5px 0; /* Espacio entre párrafos */
+    margin: 5px 0;
 }
 
 @media (max-width: 768px) {
     footer {
-        font-size: 14px; /* Ajusta el tamaño de fuente en pantallas pequeñas */
+        font-size: 14px; 
     }
 
     footer p {
-        margin: 3px 0; /* Reduce el margen en pantallas pequeñas */
+        margin: 3px 0; 
     }
 }
 
