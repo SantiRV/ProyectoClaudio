@@ -1,4 +1,4 @@
-main {
+/*main {
     h2 {
         color: #112241; 
         font-weight: bold;
@@ -15,4 +15,53 @@ main {
         border-radius: 10px; 
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
     }
+}*/
+/* Main.css */
+
+/* Imagen de fondo de cada sección */
+.section-bg {
+    background: url('../img/Guardia\ P.webp') no-repeat center center;
+    background-size: cover;
+    padding: 60px;
+    color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+.section-bg-2 {
+    background: url('../img/Paola.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 60px;
+    color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+.section-bg-3 {
+    background: url('../img/san\ marco.webp') no-repeat center center;
+    background-size: cover;
+    padding: 60px;
+    color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto de desplazamiento */
+.section-bg:hover, .section-bg-2:hover, .section-bg-3:hover {
+    transform: scale(1.05);
+}
+
+/* Opciones de diseño */
+.section-bg h2, .section-bg-2 h2, .section-bg-3 h2 {
+    color: #ffffff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.section-bg p, .section-bg-2 p, .section-bg-3 p {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.section-bg-2 ul  {
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
 }
