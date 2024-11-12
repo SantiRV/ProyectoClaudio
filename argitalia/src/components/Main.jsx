@@ -2,7 +2,7 @@ import "../styles/Main.css";
 import React from 'react';
 
 const Main = () => (
-    <main style={{ backgroundColor: '#f9e79f', padding: '50px 0' }}>
+    <main style={{ backgroundColor: '#d1c6a8', padding: '50px 0' }}>
         <div className="container">
             {/* Sección "Quiénes Somos" */}
             <section id="quienes-somos" className="section-bg mb-5">

@@ -43,7 +43,7 @@ const ContactForm = () => {
     };
 
     return (
-        <div className="container" style={{ backgroundColor: '#f9e79f', padding: '20px', borderRadius: '10px', marginTop: '20px' }}>
+        <div className="container" style={{ backgroundColor: '#d1c6a8', padding: '20px', borderRadius: '10px', marginTop: '20px' }}>
             <div className="row justify-content-center">
                 <div className="col-md-8 col-lg-6">
                     <form onSubmit={handleSubmit} id="Dejanos-tu-mensaje" className="p-4 border rounded shadow">

@@ -1,0 +1,16 @@
+.rent-card {
+    cursor: pointer;
+    background-color: #f8f9fa;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+  }
+  
+  .rent-card:hover {
+    transform: scale(1.05);
+  }
+  
+  div h2 {
+    color:#112241;
+  }
+  

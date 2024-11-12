@@ -4,6 +4,7 @@ import Main from './components/Main.jsx';
 import Footer from './components/Footer.jsx';
 import ContactForm from './components/ContactForm.jsx';
 import Presentacion from './components/Presentation.jsx';
+import Rent from './components/Rent.jsx';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <Presentacion />
       <Main />
+      <Rent />
       <ContactForm />
       <Footer />
     </div>

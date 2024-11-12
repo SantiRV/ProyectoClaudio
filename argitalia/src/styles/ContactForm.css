@@ -1,7 +1,28 @@
 #Dejanos-tu-mensaje {
-    background-color: #f9e79f; /* Color de fondo del formulario */
+    background-color: #112241; /* Color de fondo del formulario */
     padding: 50px 0; /* Espacio en la parte superior e inferior */
 }
+
+/* Cambia el color del texto en los labels */
+form label {
+    color: white;
+}
+
+/* Cambia el color del texto en los inputs y textarea */
+form input, form textarea {
+    color: white;
+    background-color: #333;  /* Fondo oscuro para contrastar */
+}
+
+/* Para el botón de envío */
+button[type="submit"] {
+    color: white;
+}
+
+form h3 {
+    color: white;
+}
+
 
 h2 {
     margin-bottom: 30px; /* Espacio debajo del título */
@@ -13,10 +34,10 @@ h2 {
 }
 
 .btn-primary {
-    background-color: #ca6f1e; /* Color del botón */
+    background-color: #112241; /* Color del botón */
     border: none; /* Sin borde */
 }
 
 .btn-primary:hover {
-    background-color: #b65e1a; /* Color al pasar el mouse */
+    background-color: #112241; /* Color al pasar el mouse */
 }
