@@ -20,7 +20,7 @@ const Rent = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
-    <section className="rent-container">
+    <section id="Alquileres-disponibles" className="rent-container">
       <div className='container'>
         
         <div className='rentals-grid'>

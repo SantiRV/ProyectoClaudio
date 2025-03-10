@@ -9,7 +9,7 @@ const Footer = () => (
             <div className="d-flex justify-content-center mb-3">
                 <div className="me-4">
                     <FaPhoneAlt /> 
-                    <span className="ms-2">+39 3773844374</span>
+                    <span className="ms-2">+39 3519279465</span>
                 </div>
                 <div className="me-4">
                     <FaEnvelope />

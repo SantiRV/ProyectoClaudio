@@ -15,6 +15,9 @@ const Header = () => {
                         <a className="nav-link text-white" href="#quienes-somos">Quiénes Somos?</a>
                     </li>
                     <li className="nav-item mx-3">
+                        <a className="nav-link text-white" href="#por-que-elegirnos">Por qué elegirnos</a>
+                    </li>
+                    <li className="nav-item mx-3">
                         <a className="nav-link text-white" href="#que-hacemos">Qué Hacemos?</a>
                     </li>
                     <li className="nav-item mx-3">

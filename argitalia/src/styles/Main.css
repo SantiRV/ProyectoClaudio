@@ -40,6 +40,13 @@
     color: #fff;
     transition: transform 0.3s ease-in-out;
 }
+.section-bg-4{
+    background: url('../img/ArgitaliaPres.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 60px;
+    color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
 
 /* Efecto de desplazamiento */
 .section-bg:hover, .section-bg-2:hover, .section-bg-3:hover {
@@ -47,19 +54,19 @@
 }
 
 /* Opciones de diseño */
-.section-bg h2, .section-bg-2 h2, .section-bg-3 h2 {
+.section-bg h2, .section-bg-2 h2, .section-bg-3 h2, .section-bg-4 h2 {
     color: #ffffff;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 5px rgb(0, 0, 0);
 }
 
-.section-bg p, .section-bg-2 p, .section-bg-3 p {
-    background: rgba(0, 0, 0, 0.5);
+.section-bg p, .section-bg-2 p, .section-bg-3 p, .section-bg-4 p   {
+    background: rgba(0, 0, 0, 0.747);
     padding: 10px;
     border-radius: 5px;
 }
 
-.section-bg-2 ul  {
-    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+.section-bg-4 ul  {
+    background: rgba(0, 0, 0, 0.747); /* Fondo semitransparente */
     color: #fff;
     padding: 10px;
     margin-bottom: 5px;
