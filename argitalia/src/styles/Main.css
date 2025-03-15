@@ -1,24 +1,3 @@
-/*main {
-    h2 {
-        color: #112241; 
-        font-weight: bold;
-    }
-
-    p {
-        font-size: 1.1em; 
-        line-height: 1.6; 
-    }
-
-    .container {
-        padding: 20px; 
-        background: white; 
-        border-radius: 10px; 
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-    }
-}*/
-/* Main.css */
-
-/* Imagen de fondo de cada sección */
 .section-bg {
     background: url('../img/Guardia\ P.webp') no-repeat center center;
     background-size: cover;
@@ -48,12 +27,10 @@
     transition: transform 0.3s ease-in-out;
 }
 
-/* Efecto de desplazamiento */
 .section-bg:hover, .section-bg-2:hover, .section-bg-3:hover {
     transform: scale(1.05);
 }
 
-/* Opciones de diseño */
 .section-bg h2, .section-bg-2 h2, .section-bg-3 h2, .section-bg-4 h2 {
     color: #ffffff;
     text-shadow: 1px 1px 5px rgb(0, 0, 0);
@@ -66,9 +43,27 @@
 }
 
 .section-bg-4 ul  {
-    background: rgba(0, 0, 0, 0.747); /* Fondo semitransparente */
+    background: rgba(0, 0, 0, 0.747); 
     color: #fff;
     padding: 10px;
     margin-bottom: 5px;
     border-radius: 5px;
+}
+/* Centrado solo para la sección de Términos y Condiciones */
+.terms-section {
+    text-align: center;
+}
+
+.buttonTyC {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: auto;
+}
+
+.buttonTyC:hover {
+    background-color: #0056b3;
 }

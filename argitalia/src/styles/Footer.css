@@ -1,24 +1,88 @@
-footer {
-    background-color: #ca6f1e; 
-    color: white; 
-    padding: 20px; 
-    text-align: center; 
-    position: relative; 
-    width: 100%; 
-    bottom: 0; 
+/* Contenedor principal del footer */
+.footer-container {
+    background-color: #1f2a38; /* Un color oscuro más neutral */
+    color: white;
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
 }
 
-footer p {
-    margin: 5px 0;
+/* Título */
+.footer-title {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: white; /* Color dorado que combina con el branding */
 }
 
+/* Contenedor de los iconos */
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para cada ícono */
+.footer-icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Tamaño y color de los íconos */
+.footer-icon-item {
+    font-size: 1.5em;
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-icon-item:hover {
+    color: white; /* Cambio de color al pasar el ratón */
+}
+
+/* Estilo de los textos */
+.footer-text {
+    font-size: 1em;
+    color: white;
+}
+
+/* Enlace */
+.footer-link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-link:hover {
+    color: #f3f3f3; /* Cambio de color al pasar el ratón sobre los enlaces */
+}
+
+/* Contenedor inferior */
+.footer-bottom {
+    margin-top: 20px;
+}
+
+/* Estilo del texto en la parte inferior */
+.footer-bottom p {
+    font-size: 1em;
+    margin: 0;
+}
+
+/* Estilos responsivos */
 @media (max-width: 768px) {
-    footer {
-        font-size: 14px; 
+    .footer-title {
+        font-size: 1.5em;
     }
 
-    footer p {
-        margin: 3px 0; 
+    .footer-text {
+        font-size: 0.9em;
+    }
+
+    .footer-icon-item {
+        font-size: 1.2em;
     }
 }
-

@@ -1,10 +1,11 @@
 import "../styles/Main.css";
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Main = () => (
+    
     <main style={{ backgroundColor: '#d1c6a8', padding: '50px 0' }}>
         <div className="container">
-            {/* Sección "Quiénes Somos" */}
             <section id="quienes-somos" className="section-bg mb-5">
                 <h2 className="text-center mb-4">Quiénes Somos?</h2>
                 <p>
@@ -49,7 +50,6 @@ garantizándoles soporte continuo en cada etapa, desde la planificación hasta l
 proceso de ciudadanía.</p>  
             </section>
             
-            {/* Sección "Qué Hacemos" */}
             <section id="que-hacemos" className="section-bg-4 mb-5">
                 <h2 className="text-center mb-4">Qué Hacemos?</h2>
                 <p>
@@ -94,7 +94,6 @@ sus raíces en Italia o España, facilitando un proceso confiable, eficiente y g
                 ciudadanía. </strong></p>
             </section>
 
-            {/* Sección "Dónde Estamos" */}
             <section id="donde-estamos" className="section-bg-3 mb-5">
                 <h2 className="text-center mb-4">Dónde Estamos?</h2>
                 <p>
@@ -107,6 +106,14 @@ sus raíces en Italia o España, facilitando un proceso confiable, eficiente y g
                     Nuestra ubicación estratégica facilita el acceso a los servicios y trámites necesarios para el proceso 
                     de ciudadanía, brindándote el respaldo y el entorno adecuado para establecerte cómodamente en Italia.
                 </p>
+            </section>
+            <section className="terms-section">
+                <h2 className="text-center mb-4">Términos y Condiciones</h2>
+                <Link to="/terms">
+        <button type="button" className="buttonTyC">
+            Ver Términos y Condiciones
+        </button>
+    </Link>
             </section>
         </div>
     </main>
