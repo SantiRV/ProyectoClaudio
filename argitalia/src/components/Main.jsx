@@ -2,9 +2,14 @@ import "../styles/Main.css";
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Main = () => (
-    
-    <main style={{ backgroundColor: '#d1c6a8', padding: '50px 0' }}>
+const Main = () => {
+
+    const handleScrollToTop = () => {
+        window.scrollTo(0, 0);  // Desplazar al principio de la página
+    }
+
+    return (
+        <main style={{ backgroundColor: '#d1c6a8', padding: '50px 0' }}>
         <div className="container">
             <section id="quienes-somos" className="section-bg mb-5">
                 <h2 className="text-center mb-4">Quiénes Somos?</h2>
@@ -109,15 +114,16 @@ sus raíces en Italia o España, facilitando un proceso confiable, eficiente y g
             </section>
             <section className="terms-section">
                 <h2 className="text-center mb-4">Términos y Condiciones</h2>
-                <Link to="/terms">
+                <Link to="/terms" onClick={handleScrollToTop}>
         <button type="button" className="buttonTyC">
             Ver Términos y Condiciones
         </button>
     </Link>
             </section>
         </div>
-    </main>
-);
+        </main>
+    );
+};
 
 export default Main;
 
