@@ -33,7 +33,7 @@
     font-size: 1rem;
     font-weight: bold;
     color: white;
-    background-color: #ca6f1e;
+    background-color: #007bff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -41,5 +41,5 @@
 }
 
 .back-button:hover {
-    background-color: #a55d18;
+    background-color: #0056b3;
 }
