@@ -1,11 +1,13 @@
 import "../styles/Header.css";
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
         <nav className="navbar navbar-expand-lg" style={{ backgroundColor: '#112241' }}>
-            <a href="#quienes-somos" className="navbar-brand ml-3 text-white">
-                Argitalia Ciudadanias</a>
+            <Link to="/" className="navbar-brand ml-3 text-white">
+                Argitalia Ciudadanias
+                </Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>

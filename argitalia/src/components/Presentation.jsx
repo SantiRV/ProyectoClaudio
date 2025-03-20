@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/Presentation.css';
-import logo from '../logos/argitalia (1).png'; // Ajusta la ruta de la imagen del logo
+import logo from '../logos/argitalia (1).png'; 
 
 const Presentacion = () => (
     <div className="presentacion-container">
