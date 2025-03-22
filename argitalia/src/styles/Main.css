@@ -1,60 +1,96 @@
+/* Ajustes generales */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+    grid-template-rows: auto; /* Las filas se ajustan al contenido */
+    gap: 10px; /* Espacio entre los elementos */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Secciones generales */
+.section-bg, .section-bg-2, .section-bg-3 {
+    width: 100%; /* Asegura que todas las secciones ocupen el 100% de su columna */
+    padding: 20px;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Coloca las tres primeras secciones en la primera columna */
 .section-bg {
-    background: url('../img/Guardia\ P.webp') no-repeat center center;
-    background-size: cover;
-    padding: 60px;
-    color: #fff;
-    transition: transform 0.3s ease-in-out;
+    grid-column: 1; /* En la primera columna */
+    grid-row: 1; /* Primer fila */
 }
+
 .section-bg-2 {
-    background: url('../img/Paola.jpg') no-repeat center center;
-    background-size: cover;
-    padding: 60px;
-    color: #fff;
-    transition: transform 0.3s ease-in-out;
+    grid-column: 1; /* En la primera columna */
+    grid-row: 2; /* Segunda fila */
 }
+
 .section-bg-3 {
-    background: url('../img/san\ marco.webp') no-repeat center center;
-    background-size: cover;
-    padding: 60px;
-    color: #fff;
-    transition: transform 0.3s ease-in-out;
-}
-.section-bg-4{
-    background: url('../img/ArgitaliaPres.jpg') no-repeat center center;
-    background-size: cover;
-    padding: 60px;
-    color: #fff;
-    transition: transform 0.3s ease-in-out;
+    grid-column: 1 / span 2; /* En la primera columna y que ocupe 2 columnas */
+    grid-row: 4; /* Tercer fila */
 }
 
-.section-bg:hover, .section-bg-2:hover, .section-bg-3:hover {
-    transform: scale(1.05);
+/* La sección 4 a la derecha, sola en su propia columna */
+.section-bg-4 {
+    width: 100%; /* Asegura que todas las secciones ocupen el 100% de su columna */
+    padding: 20px;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    grid-column: 2; /* En la segunda columna (a la derecha) */
+    grid-row: span 3; /* Ocupa 3 filas (alinea con las otras secciones en la derecha) */
+    height:max-content; 
 }
 
+/* Sección con el botón abajo (si tienes una clase específica para eso) */
+.terms-section {
+    grid-column: span 2; /* Hace que ocupe ambas columnas */
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Backgrounds de cada sección */
+.section-bg { background-image: url('../img/Guardia\ P.webp'); }
+.section-bg-2 { background-image: url('../img/Paola.jpg'); }
+.section-bg-3 { background-image: url('../img/san\ marco.webp'); }
+.section-bg-4 { background-image: url('../img/ArgitaliaPres.jpg'); }
+
+/* Estilos para los textos y ajustes de layout */
 .section-bg h2, .section-bg-2 h2, .section-bg-3 h2, .section-bg-4 h2 {
     color: #ffffff;
     text-shadow: 1px 1px 5px rgb(0, 0, 0);
+    font-size: 2rem;
 }
 
-.section-bg p, .section-bg-2 p, .section-bg-3 p, .section-bg-4 p   {
-    background: rgba(0, 0, 0, 0.747);
-    padding: 10px;
+.section-bg p, .section-bg-2 p, .section-bg-3 p, .section-bg-4 p {
+    color: beige;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
     border-radius: 5px;
+    font-size: 1rem;
 }
 
-.section-bg-4 ul  {
-    background: rgba(0, 0, 0, 0.747); 
+.section-bg-4 ul {
+    background: rgba(0, 0, 0, 0.7);
     color: #fff;
-    padding: 10px;
+    padding: 15px;
     margin-bottom: 5px;
     border-radius: 5px;
 }
-/* Centrado solo para la sección de Términos y Condiciones */
-.terms-section {
-    text-align: center;
-}
 
 .buttonTyC {
+    
     background-color: #007bff;
     color: white;
     padding: 10px 15px;
@@ -62,6 +98,7 @@
     cursor: pointer;
     border-radius: 5px;
     width: auto;
+    transition: background-color 0.3s ease;
 }
 
 .buttonTyC:hover {
