@@ -6,6 +6,8 @@ import ContactForm from './components/ContactForm.jsx';
 import Presentacion from './components/Presentation.jsx';
 import Rent from './components/Rent.jsx';
 import TyC from './components/TyC.jsx'; 
+import Clients from './components/Cleints.jsx';
+import images from './utils/utils';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -21,6 +23,7 @@ function App() {
             <>
               <Presentacion />
               <Main />
+              <Clients images={images} />
               <Rent />
               <ContactForm />
               <Footer />
