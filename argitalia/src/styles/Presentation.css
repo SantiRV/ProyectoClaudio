@@ -11,7 +11,7 @@
 }
 
 .presentacion-logo {
-    width: 200px; /* Aumenta el tamaño del logo */
+    width: 200px; /* Tamaño del logo en pantallas grandes */
     margin-right: 40px;
 }
 
@@ -34,4 +34,46 @@
     margin: 0;
     font-weight: 300;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Media Queries para pantallas pequeñas (menos de 768px) */
+@media (max-width: 768px) {
+    .presentacion-container {
+        flex-direction: column; /* Apila el logo y el texto verticalmente */
+        text-align: center; /* Centra el texto */
+        padding: 10px; /* Reduce el padding */
+    }
+
+    .presentacion-logo {
+        width: 150px; /* Reduce el tamaño del logo en móviles */
+        margin-right: 0; /* Elimina el margen derecho */
+        margin-bottom: 20px; /* Añade margen inferior */
+    }
+
+    .presentacion-texto {
+        align-items: center; /* Centra el texto */
+    }
+
+    .presentacion-texto h1 {
+        font-size: 3rem; /* Reduce el tamaño del título principal */
+    }
+
+    .presentacion-texto h2 {
+        font-size: 2rem; /* Reduce el tamaño del subtítulo */
+    }
+}
+
+/* Media Queries para pantallas muy pequeñas (menos de 480px) */
+@media (max-width: 480px) {
+    .presentacion-logo {
+        width: 120px; /* Reduce aún más el tamaño del logo */
+    }
+
+    .presentacion-texto h1 {
+        font-size: 2.5rem; /* Tamaño más pequeño para el título */
+    }
+
+    .presentacion-texto h2 {
+        font-size: 1.5rem; /* Tamaño más pequeño para el subtítulo */
+    }
 }
