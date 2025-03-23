@@ -1,70 +1,69 @@
-import React, { useState } from 'react';
-import Alquiler1 from '../img-alquileres/Alquiler1.jpeg';
-import Alquiler2 from '../img-alquileres/Alquiler2.jpeg';
-import Alquiler3 from '../img-alquileres/Alquiler3.jpeg';
-import Alquiler4 from '../img-alquileres/Alquiler4.jpeg';
-import Alquiler5 from '../img-alquileres/Alquiler5.jpeg';
-import Alquiler6 from '../img-alquileres/Alquiler6.jpeg';
+import React, { useState, useEffect } from "react";
 import '../styles/Rent.css';
 
-const rentals = [
-  {
-    title: "Importante!",
-    images: [Alquiler1, Alquiler2, Alquiler3, Alquiler4, Alquiler5, Alquiler6],
-    text: "Las fotos de los departamentos son meramente ilustrativas. Las fotos reales de cada inmueble se envían según la disponibilidad al momento de la consulta."
-  },
-];
 
-const Rent = () => {
-  const [showModal, setShowModal] = useState(false);
+const Rent = ({ images }) => {
   const [selectedImage, setSelectedImage] = useState(null);
 
-  return (
-    <section id="Alquileres-disponibles" className="rent-container">
-      <div className='container'>
-        
-        <div className='rentals-grid'>
-          
-          {rentals.map((rental, index) => (
-            <div key={index} className='rental-card'>
-              <h2 className='rental-title'>Alquileres para fijar residencia en Italia</h2>
-              <h3><span>{rental.title}</span></h3>
-              <p>{rental.text}</p>
-              <button className='modal-button' onClick={() => setShowModal(true)}>Ver imágenes</button>
-            </div>
-          ))}
-        </div>
-      </div>
+  const openModal = (image) => {
+    setSelectedImage(image);
+  };
 
-      {/* Modal */}
-      {showModal && (
-        <div className="modal-overlay">
-          <div className="modal-content">
-            <span className="close-button" onClick={() => setShowModal(false)}>&times;</span>
-            <h3>Imágenes de Alquileres</h3>
-            <div className="modal-images">
-              {rentals[0].images.map((image, index) => (
-                <img 
-                  key={index} 
-                  src={image} 
-                  alt={`Alquiler ${index}`} 
-                  className="modal-image"
-                  onClick={() => setSelectedImage(image)}
-                />
-              ))}
-            </div>
+  const closeModal = () => {
+    setSelectedImage(null);
+  };
+
+  // Cerrar la modal al presionar la tecla "Esc"
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        closeModal();
+      }
+    };
+
+    if (selectedImage) {
+      window.addEventListener("keydown", handleKeyDown);
+    }
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [selectedImage]);
+
+  return (
+   
+    <div className="rent-container">
+       <div className="rent-title">
+      <h2 className="text-center mb-4">Alquileres para fijar residencia</h2>
+      </div>
+      <div className="gallery-container"> 
+      {images.map((img, index) => (
+        <img
+          key={index}
+          src={img.src}
+          alt={img.alt || "Imagen"}
+          className="gallery-image"
+          onClick={() => openModal(img)}
+        />
+      ))}
+
+      {selectedImage && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="close-button" onClick={closeModal}>&times;</button>
+            <img src={selectedImage.src} alt={selectedImage.alt} className="modal-image" />
+            {selectedImage.description && <p className="modal-description">{selectedImage.description}</p>}
           </div>
         </div>
-      )}
-
-      
-      {selectedImage && (
-        <div className="fullscreen-overlay" onClick={() => setSelectedImage(null)}>
-          <img src={selectedImage} alt="Alquiler Ampliado" className="fullscreen-image" />
-        </div>
-      )}
-    </section>
+      )}</div>
+      <h2 className="text-center mt-4">Importante!</h2>
+      <h4 className="text-center mt-4">Las fotos de los departamentos son meramente ilustrativas. Las fotos reales de cada inmueble se envían según la disponibilidad al momento de la consulta.</h4>
+    </div>
   );
 };
 
 export default Rent;
+
+
+
+

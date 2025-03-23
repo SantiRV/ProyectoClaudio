@@ -1,43 +1,99 @@
-#Dejanos-tu-mensaje {
-    background-color: #112241; /* Color de fondo del formulario */
-    padding: 50px 0; /* Espacio en la parte superior e inferior */
+/* Contenedor principal */
+.contact-form-container {
+    background-color: #d1c6a8;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
 }
 
-/* Cambia el color del texto en los labels */
-form label {
+/* Wrapper del formulario */
+.contact-form-wrapper {
+    max-width: 600px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centrar el formulario */
+}
+
+/* Estilos del formulario */
+.contact-form {
+    background-color: #112241;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Encabezado del formulario */
+.contact-form-header h3 {
     color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
 }
 
-/* Cambia el color del texto en los inputs y textarea */
-form input, form textarea {
+/* Grupos de campos (inputs y textarea) */
+.contact-form-group {
+    margin-bottom: 20px;
+}
+
+/* Labels */
+.contact-form-label {
     color: white;
-    background-color: #333;  /* Fondo oscuro para contrastar */
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
 }
 
-/* Para el botón de envío */
-button[type="submit"] {
+/* Inputs y textarea */
+.contact-form-input,
+.contact-form-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
     color: white;
+    font-size: 16px;
 }
 
-form h3 {
+.contact-form-input:focus,
+.contact-form-textarea:focus {
+    border-color: #112241;
+    box-shadow: 0 0 5px rgba(17, 34, 65, 0.5);
+    outline: none;
+}
+
+/* Textarea */
+.contact-form-textarea {
+    resize: vertical; /* Permitir redimensionar verticalmente */
+    min-height: 100px;
+}
+
+/* Botón de envío */
+.contact-form-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #112241;
+    border: none;
+    border-radius: 5px;
     color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-
-h2 {
-    margin-bottom: 30px; /* Espacio debajo del título */
-    font-weight: bold; /* Negrita para el título */
+.contact-form-button:hover {
+    background-color: #1a365d;
 }
 
-.form-control {
-    border-radius: 0.25rem; /* Bordes redondeados */
+.contact-form-button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
 }
 
-.btn-primary {
-    background-color: #112241; /* Color del botón */
-    border: none; /* Sin borde */
-}
-
-.btn-primary:hover {
-    background-color: #112241; /* Color al pasar el mouse */
+/* Mensaje de error */
+.contact-form-error {
+    background-color: #ff4444;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
 }

@@ -6,14 +6,14 @@ import img5 from "../img/ClientesClaudio5.jpeg";
 import img6 from "../img/ClientesClaudio6.jpeg";
 import img7 from "../img/ClientesClaudio7.jpeg";
 
-const  images = [
-    { src: img1, alt: "Imagen 1", description: "Descripción opcional 1" },
+const  imagesClients = [
+    { src: img1, alt: "Imagen 1"},
     { src: img2, alt: "Imagen 2" },
-    { src: img3, alt: "Imagen 3", description: "Descripción opcional 3" },
-    { src: img4, alt: "Imagen 4", description: "Descripción opcional 1" },
+    { src: img3, alt: "Imagen 3"},
+    { src: img4, alt: "Imagen 4" },
     { src: img5, alt: "Imagen 5" },
-    { src: img6, alt: "Imagen 6", description: "Descripción opcional 3" },
-    { src: img7, alt: "Imagen 7", description: "Descripción opcional 3" },
+    { src: img6, alt: "Imagen 6"},
+    { src: img7, alt: "Imagen 7"},
   ];
 
-  export default images;
+  export default  imagesClients;

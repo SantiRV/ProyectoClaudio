@@ -1,4 +1,3 @@
-// src/components/ContactForm.jsx
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import "../styles/ContactForm.css";
@@ -9,6 +8,8 @@ const ContactForm = () => {
         email: '',
         message: '',
     });
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState('');
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -18,8 +19,21 @@ const ContactForm = () => {
         }));
     };
 
+    const validateEmail = (email) => {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        if (!validateEmail(formData.email)) {
+            setError('Por favor, introduce un correo electrónico válido.');
+            return;
+        }
+
+        setIsLoading(true);
+        setError('');
 
         emailjs.send(
             'service_mj9ktui',
@@ -38,61 +52,64 @@ const ContactForm = () => {
         })
         .catch((error) => {
             console.error(error.text);
-            alert('Hubo un problema al enviar el formulario.');
+            setError('Hubo un problema al enviar el formulario. Por favor, inténtalo de nuevo.');
+        })
+        .finally(() => {
+            setIsLoading(false);
         });
     };
 
     return (
-        <div className="container" style={{ backgroundColor: '#d1c6a8', padding: '20px', borderRadius: '10px', marginTop: '20px' }}>
-            <div className="row justify-content-center">
-                <div className="col-md-8 col-lg-6">
-                    <form onSubmit={handleSubmit} id="Dejanos-tu-mensaje" className="p-4 border rounded shadow">
-                        <div className="mb-4 text-center">
-                            <h3>Déjanos tu mensaje</h3>
-                        </div>
-                        <div className="mb-3">
-                            <label htmlFor="name" className="form-label">Nombre</label>
-                            <input
-                                type="text"
-                                className="form-control"
-                                id="name"
-                                name="name"
-                                value={formData.name}
-                                onChange={handleChange}
-                                required
-                            />
-                        </div>
-                        <div className="mb-3">
-                            <label htmlFor="email" className="form-label">Correo Electrónico</label>
-                            <input
-                                type="email"
-                                className="form-control"
-                                id="email"
-                                name="email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                required
-                            />
-                        </div>
-                        <div className="mb-3">
-                            <label htmlFor="message" className="form-label">Mensaje</label>
-                            <textarea
-                                className="form-control"
-                                id="message"
-                                name="message"
-                                rows="3"
-                                value={formData.message}
-                                onChange={handleChange}
-                                required
-                            />
-                        </div>
-                        <button type="submit" className="btn btn-primary w-100">Enviar</button>
-                    </form>
-                </div>
+        <div className="contact-form-container">
+            <div className="contact-form-wrapper">
+                <form onSubmit={handleSubmit} className="contact-form">
+                    <div className="contact-form-header">
+                        <h3>Déjanos tu mensaje</h3>
+                    </div>
+                    {error && <div className="contact-form-error">{error}</div>}
+                    <div className="contact-form-group">
+                        <label htmlFor="name" className="contact-form-label">Nombre</label>
+                        <input
+                            type="text"
+                            className="contact-form-input"
+                            id="name"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+                    <div className="contact-form-group">
+                        <label htmlFor="email" className="contact-form-label">Correo Electrónico</label>
+                        <input
+                            type="email"
+                            className="contact-form-input"
+                            id="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+                    <div className="contact-form-group">
+                        <label htmlFor="message" className="contact-form-label">Mensaje</label>
+                        <textarea
+                            className="contact-form-textarea"
+                            id="message"
+                            name="message"
+                            rows="3"
+                            value={formData.message}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+                    <button type="submit" className="contact-form-button" disabled={isLoading}>
+                        {isLoading ? 'Enviando...' : 'Enviar'}
+                    </button>
+                </form>
             </div>
         </div>
     );
 };
 
 export default ContactForm;
-
